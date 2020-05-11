@@ -27,6 +27,13 @@ class Data:
                                 params=self.params)
         self.data = json.loads(response.text)
 
+    def export_json(self):
+        json_data = self.data
+
+        with open('covid_details.json', 'w') as json_file:
+            json.dump(json_data, json_file)
+
+
     def get_total_cases(self):
         data = self.data['total']
 
@@ -54,7 +61,3 @@ class Data:
 
 data = Data(API_KEY, PROJECT_TOKEN)
 
-
-print(data.data)
-
-print(data.get_country_data('Canada'))
