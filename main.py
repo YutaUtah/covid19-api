@@ -1,10 +1,7 @@
 import requests
 import json
 
-API_KEY = "teqVRTa6T0fr"
-PROJECT_TOKEN = "tC-w4ZE2duZT"
-RUN_TOKEN = "tF39FsT3mtTP"
-
+import settings
 
 
 class Data:
@@ -59,5 +56,5 @@ class Data:
 
         return '0'
 
-data = Data(API_KEY, PROJECT_TOKEN)
+data = Data(settings.api_key, settings.project_token)
 
