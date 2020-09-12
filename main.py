@@ -5,9 +5,10 @@ import settings
 
 
 class Data:
-    '''
+    """
     instantiate api_key and project_token
-    '''
+    """
+
     def __init__(self, api_key, project_token):
 
         self.api_key = api_key
